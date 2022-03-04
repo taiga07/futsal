@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row d-flex align-items-center justify-content-center">
+    <%= form_with model: @user, local: true do |f| %>
+      <table class="table">
+        <tr>
+          <th colspan="2">
+            <h3>ログイン</h3>
+          </th>
+        </tr>
+        <tr>
+          <div class="field">
+            <th><%= f.label :メールアドレス %></th>
+            <td><%= f.text_field :email, autofocus: true %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="field">
+            <th><%= f.label :パスワード %></th>
+            <td><%= f.password_field :password %></td>
+          </div>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <%= f.submit "ログイン" %>
+          </th>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+</div>
