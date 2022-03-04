@@ -9,25 +9,25 @@
         </tr>
         <tr>
           <div class="field">
-            <th><%= f.label :チーム名 %></th>
+            <th><%= f.label :name, "チーム名" %></th>
             <td><%= f.text_field :name, autofocus: true, placeholder: "チーム名" %></td>
           </div>
         </tr>
         <tr>
           <div class="field">
-            <th><%= f.label :メールアドレス %></th>
+            <th><%= f.label :email, "メールアドレス" %></th>
             <td><%= f.email_field :email, autofocus: true, placeholder: "futsal@example.com" %></td>
           </div>
         </tr>
         <tr>
           <div class="field">
-            <th><%= f.label :パスワード %></th>
-            <td> <%= f.password_field :password, autocomplete: "new-password" %></td>
+            <th><%= f.label :password, "パスワード" %></th>
+            <td><%= f.password_field :password, autocomplete: "new-password" %></td>
           </div>
         </tr>
         <tr>
           <div class="field">
-            <th><%= f.label :パスワード（確認用） %></th>
+            <th><%= f.label :password, "パスワード（確認用）" %></th>
             <td><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
           </div>
         </tr>
