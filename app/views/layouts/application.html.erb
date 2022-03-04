@@ -15,10 +15,11 @@
         <ul class="navbar-nav d-flex align-items-center">
           <!--ログインしているかどうか-->
           <% if current_user %>
-            <!--<li class="nav-item"><%#=link_to "募集一覧",  %></li>-->
+            <li class="nav-item"><%=link_to "募集一覧", posts_path  %></li>
+            <li class="nav-item"><%=link_to "新規募集", new_post_path  %></li>
             <li class="nav-item"><%=link_to "ログアウト", logout_path, method: :delete %></li>
           <% else %>
-            <!--<li class="nav-item"><%#=link_to "募集一覧",  %></li>-->
+            <li class="nav-item"><%=link_to "募集一覧", posts_path %></li>
             <li class="nav-item"><%=link_to "チーム登録", new_user_path %></li>
             <li class="nav-item"><%=link_to "ログイン", login_path %></li>
           <% end %>
