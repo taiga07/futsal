@@ -1,27 +1,31 @@
 <div class="container">
+  <h3 class="d-flex justify-content-center">個サル詳細</h3>
   <div class="row">
-    <div>
+    <div class="col-lg-3">
       <%= link_to user_path(@user.id) do %>
         <%= @user.name %>
       <% end %>
     </div>
-    <div>
-      <%= @post.place %>
-    </div>
-    <div>
-      <%= @post.schedule %>
-    </div>
-    <div>
-      <%= @post.body %>
-    </div>
-    <div>
-      <%= link_to "問い合わせ", @post.contact %>
-    </div>
-    <div>
-      <%= link_to "編集", edit_post_path(@post.id) %>
-    </div>
-    <div>
-      <%= link_to "削除", post_path(@post.id), method: :delete %>
+    <div class="col-lg-9">
+      <div class="mb-3">
+        会場：<%= @post.place %>
+      </div>
+      <div class="mb-3">
+        日程：<%= @post.schedule %>
+      </div>
+      <div class="mb-3">
+        内容：<br>
+        <%= safe_join(@post.body.split("\n"),tag(:br)) %>
+      </div>
+      <div class="mb-3">
+        連絡先：<%= link_to @post.contact, @post.contact %>
+      </div>
+      <div>
+        <%= link_to "編集", edit_post_path(@post.id) %>
+      </div>
+      <div>
+        <%= link_to "削除", post_path(@post.id), method: :delete %>
+      </div>
     </div>
   </div>
 </div>

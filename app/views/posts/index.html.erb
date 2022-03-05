@@ -1,22 +1,22 @@
 <div class="container">
-  <div class="row">
-    <h3>募集チーム一覧</h3>
-    <% @posts.each do |post| %>
-      <div class="team-name">
+  <h3 class="d-flex justify-content-center">募集チーム一覧</h3>
+  <% @posts.each do |post| %>
+    <div class="row d-flex justify-content-center mb-4">
+      <div class="col-lg-3">
         <%= link_to user_path(post.user.id) do %>
           <%= post.user.name %>
         <% end %>
       </div>
-      <div class="place-name">
-        <%= post.place %>
+      <div class="col-lg-4">
+        会場：<%= post.place %>
       </div>
-      <div class="schedule">
+      <div class="col-lg-4">
         <%= post.schedule %>
       </div>
       <div class="detail">
         <%= link_to "募集詳細", post_path(post.id) %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 

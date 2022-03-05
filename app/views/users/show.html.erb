@@ -1,27 +1,28 @@
 <div class="container">
-  <h3>チームプロフィール</h3>
   <div class="row">
     <div class="col-lg-4">
-      <div>
+      <h3>チームプロフィール</h3>
+      <div class="mb-3">
         <%= @user.name %>
       </div>
-      <div>
-        <%= @user.introduction %>
+      <div class="mb-3">
+        <%= safe_join(@user.introduction.split("\n"),tag(:br)) %>
       </div>
       <div>
         <%= link_to "プロフィール編集", edit_user_path(@user.id) %>
       </div>
     </div>
     <div class="col-lg-8">
+      <h3>募集日程</h3>
       <% @posts.each do |post| %>
-        <div>
-          <%= post.place %>
-        </div>
-        <div>
-          <%= post.schedule %>
-        </div>
-        <div>
-          <%= link_to "募集詳細", post_path(post.id) %>
+        <div class="mb-3">
+          <div>
+            会場：<%= post.place %>
+          </div>
+          <div>
+            日程：<%= post.schedule %>
+            <%= link_to "募集詳細", post_path(post.id) %>
+          </div>
         </div>
       <% end %>
     </div>

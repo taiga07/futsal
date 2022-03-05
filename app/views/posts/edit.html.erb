@@ -1,26 +1,26 @@
 <div class="container">
-  <div class="row">
+  <div class="d-flex justify-content-center">
     <h3>編集画面</h3>
-    <%= form_with model: @post, local: true do |f| %>
-      <div class="field">
-        <%= f.label :place, "会場" %>
-        <%= f.text_field :place, autofocus: true %>
-      </div>
-      <div class="field">
-        <%= f.label :schedule, "開催日時" %>
-        <%= f.text_field :schedule, autofocus: true %>
-      </div>
-      <div class="field">
-        <%= f.label :body, "詳細" %>
-        <%= f.text_area :body, autofocus: true %>
-      </div>
-      <div class="field">
-        <%= f.label :contact, "連絡URL" %>
-        <%= f.text_field :contact, autofocus: true %>
-      </div>
-      <div>
-        <%= f.submit "変更を保存" %>
-      </div>
-    <% end %>
   </div>
+  <%= form_with model: @post, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :place, "会場" %>
+      <%= f.text_field :place, autofocus: true, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :schedule, "開催日時" %>
+      <%= f.text_field :schedule, autofocus: true, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body, "詳細" %>
+      <%= f.text_area :body, autofocus: true, size: '15x15', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :contact, "連絡URL" %>
+      <%= f.text_field :contact, autofocus: true, class: 'form-control' %>
+    </div>
+    <div>
+      <%= f.submit "変更を保存" %>
+    </div>
+  <% end %>
 </div>
