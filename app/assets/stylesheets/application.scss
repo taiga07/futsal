@@ -22,3 +22,16 @@
   box-sizing: border-box;
   word-wrap : break-word;
 }
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+
+.top-text{
+  margin-top: 70px;
+}

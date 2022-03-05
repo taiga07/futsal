@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mt-4">
     <h3>メンバーの募集をかけよう！</h3>
   </div>
   <%= form_with model: @post, local: true do |f| %>
@@ -19,7 +19,7 @@
       <%= f.label :contact, "連絡URL" %>
       <%= f.text_field :contact, autofocus: true, placeholder: "LabolaやオープンチャットのURL", class: 'form-control' %>
     </div>
-    <div>
+    <div class="d-flex justify-content-center">
       <%= f.submit "投稿" %>
     </div>
   <% end %>

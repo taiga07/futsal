@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mt-4">
     <h3>編集画面</h3>
   </div>
   <%= form_with model: @post, local: true do |f| %>
@@ -13,13 +13,13 @@
     </div>
     <div class="form-group">
       <%= f.label :body, "詳細" %>
-      <%= f.text_area :body, autofocus: true, size: '15x15', class: 'form-control' %>
+      <%= f.text_area :body, autofocus: true, size: '13x13', class: 'form-control' %>
     </div>
     <div class="form-group">
       <%= f.label :contact, "連絡URL" %>
       <%= f.text_field :contact, autofocus: true, class: 'form-control' %>
     </div>
-    <div>
+    <div class="d-flex justify-content-center">
       <%= f.submit "変更を保存" %>
     </div>
   <% end %>
