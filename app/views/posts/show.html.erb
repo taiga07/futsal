@@ -1,5 +1,27 @@
 <div class="container">
   <div class="row">
-    
+    <div>
+      <%= link_to user_path(@user.id) do %>
+        <%= @user.name %>
+      <% end %>
+    </div>
+    <div>
+      <%= @post.place %>
+    </div>
+    <div>
+      <%= @post.schedule %>
+    </div>
+    <div>
+      <%= @post.body %>
+    </div>
+    <div>
+      <%= @post.contact %>
+    </div>
+    <div>
+      <%= link_to "編集", edit_post_path(@post.id) %>
+    </div>
+    <div>
+      <%= link_to "削除", post_path(@post.id), method: :delete %>
+    </div>
   </div>
 </div>
