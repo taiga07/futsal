@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h3>プロフィール編集</h3>
+    <%= form_with model: @user, local: true do |f| %>
+      <div>
+        <%= f.label :name, "チーム名" %>
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <%= f.label :introduction, "チーム紹介" %>
+        <%= f.text_area :introduction %>
+      </div>
+      <div>
+        <%= f.label :email, "メールアドレス" %>
+        <%= f.email_field :email %>
+      </div>
+      <div>
+        <%= f.submit "変更を保存" %>
+      </div>
+    <% end %>
+  </div>
+</div>

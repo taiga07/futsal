@@ -1,0 +1,29 @@
+<div class="container">
+  <h3>チームプロフィール</h3>
+  <div class="row">
+    <div class="col-lg-4">
+      <div>
+        <%= @user.name %>
+      </div>
+      <div>
+        <%= @user.introduction %>
+      </div>
+      <div>
+        <%= link_to "プロフィール編集", edit_user_path(@user.id) %>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <% @posts.each do |post| %>
+        <div>
+          <%= post.place %>
+        </div>
+        <div>
+          <%= post.schedule %>
+        </div>
+        <div>
+          <%= link_to "募集詳細", post_path(post.id) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

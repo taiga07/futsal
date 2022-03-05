@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Futsal</title>
+    <title>エンジョイ!!フットボール</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,6 +13,9 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav d-flex align-items-center">
+          <li class="site-name">
+            <h1>エンジョイ!!フットボール</h1>
+          </li>
           <!--ログインしているかどうか-->
           <% if current_user %>
             <li class="nav-item"><%=link_to "募集一覧", posts_path  %></li>

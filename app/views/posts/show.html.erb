@@ -15,7 +15,7 @@
       <%= @post.body %>
     </div>
     <div>
-      <%= @post.contact %>
+      <%= link_to "問い合わせ", @post.contact %>
     </div>
     <div>
       <%= link_to "編集", edit_post_path(@post.id) %>
