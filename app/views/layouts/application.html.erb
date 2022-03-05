@@ -30,6 +30,7 @@
             <% if current_user %>
               <li class="nav-item mr-3"><%= link_to "募集一覧", posts_path  %></li>
               <li class="nav-item mr-3"><%= link_to "新規募集", new_post_path  %></li>
+              <li class="nav-item mr-3"><%= link_to "マイページ", user_path(current_user)  %></li>
               <li class="nav-item mr-3"><%= link_to "ログアウト", logout_path, method: :delete %></li>
             <% else %>
               <li class="nav-item mr-3"><%= link_to "募集一覧", posts_path %></li>

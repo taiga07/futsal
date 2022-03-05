@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
 
+  before_action :user_login, only: [:new, :edit, :update, :destroy]
+  before_action :set_futsal, only: [:edit, :update, :destroy]
+  before_action :prevent_url, only: [:edit, :update, :destroy]
+
   def new
     @post = Post.new
   end
@@ -50,5 +54,24 @@ class PostsController < ApplicationController
     params.require(:post).permit(:place, :schedule, :body, :contact)
   end
 
+  # ログインしていないユーザーの利用制限
+  def user_login
+    unless current_user
+      redirect_to root_path
+    end
+  end
+  # ここまで
+
+  # ログインユーザーのURL直打ち防止
+  def set_futsal
+    @post = Post.find(params[:id])
+  end
+
+  def prevent_url
+    if @post.user_id != current_user.id
+      redirect_to root_path
+    end
+  end
+  # ここまで
 
 end

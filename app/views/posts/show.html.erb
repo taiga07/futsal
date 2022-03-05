@@ -20,12 +20,14 @@
       <div class="mb-3">
         連絡先：<%= link_to @post.contact, @post.contact %>
       </div>
-      <div>
-        <%= link_to "編集", edit_post_path(@post.id) %>
-      </div>
-      <div>
-        <%= link_to "削除", post_path(@post.id), method: :delete %>
-      </div>
+      <% if @user == current_user %>
+        <div>
+          <%= link_to "編集", edit_post_path(@post.id) %>
+        </div>
+        <div>
+          <%= link_to "削除", post_path(@post.id), method: :delete %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

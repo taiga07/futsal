@@ -5,12 +5,16 @@
       <div class="mb-3">
         <%= @user.name %>
       </div>
-      <div class="mb-3">
-        <%= safe_join(@user.introduction.split("\n"),tag(:br)) %>
-      </div>
-      <div>
-        <%= link_to "プロフィール編集", edit_user_path(@user.id) %>
-      </div>
+      <% unless @user.introduction.nil? %>
+        <div class="mb-3">
+          <%= safe_join(@user.introduction.split("\n"),tag(:br)) %>
+        </div>
+      <% end %>
+      <% if @user == current_user %>
+        <div>
+          <%= link_to "プロフィール編集", edit_user_path(@user.id) %>
+        </div>
+      <% end %>
     </div>
     <div class="col-lg-8">
       <h3>募集日程</h3>
