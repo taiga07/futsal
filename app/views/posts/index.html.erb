@@ -9,13 +9,14 @@
           <%= post.user.name %>
         <% end %>
       </div>
-      <div class="col-lg-4">
-        会場：<%= post.place %>
+      <div class="col-lg-3">
+        会場:<br>
+        <%= post.place %>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <%= post.schedule %>
       </div>
-      <div class="detail">
+      <div class="col-lg-3">
         <%= link_to "募集詳細", post_path(post.id) %>
       </div>
     </div>
