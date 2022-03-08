@@ -33,5 +33,22 @@ main {
 }
 
 .top-text{
-  margin-top: 70px;
+  margin-top: 200px;
+  color: #FFFFFF;
+}
+
+.nav-item a{
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-brand a{
+  color: black;
+  text-decoration: none;
+}
+
+.homes {
+  background: image-url('backimage.jpg');
+  background-size: cover;
+  background-position: center;
 }
