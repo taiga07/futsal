@@ -11,39 +11,7 @@
   </head>
 
   <body class="<%= controller.controller_name %>">
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D6E5DF;">
-        <div class="navbar-brand m-auto">
-          <%= link_to root_path do %>
-            <h3>エンジョイ!!フットボール</h3>
-          <% end %>
-        </div>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <!--ログインしているかどうか-->
-            <% if current_user %>
-              <li class="nav-item mr-3"><%= link_to "募集一覧", posts_path  %></li>
-              <li class="nav-item mr-3"><%= link_to "新規募集", new_post_path  %></li>
-              <li class="nav-item mr-3"><%= link_to "マイページ", user_path(current_user)  %></li>
-              <li class="nav-item mr-3"><%= link_to "ログアウト", logout_path, method: :delete %></li>
-            <% else %>
-              <li class="nav-item mr-3"><%= link_to "募集一覧", posts_path %></li>
-              <li class="nav-item mr-3"><%= link_to "チーム登録", new_user_path %></li>
-              <li class="nav-item mr-3"><%= link_to "ログイン", login_path %></li>
-            <% end %>
-          </ul>
-        </div>
-      </nav>
-      <div class="d-flex justify-content-center">
-        <%= render 'layouts/flash' %>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
 </html>

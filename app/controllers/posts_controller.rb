@@ -23,6 +23,11 @@ class PostsController < ApplicationController
   def index
     @user = current_user
     @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
+
+    if params[:search].present?
+      @posts = Post.where('place LIKE ? or schedule LIKE ? or body LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%").page(params[:page]).per(10)
+    end
+
   end
 
   def show
