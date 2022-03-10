@@ -52,3 +52,13 @@ main {
   background-size: cover;
   background-position: center;
 }
+
+.team-introduction, .team-name{
+  border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+.post-box{
+  border-bottom: 1px solid black;
+}

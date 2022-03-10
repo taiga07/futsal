@@ -2,11 +2,11 @@
   <div class="row mt-4">
     <div class="col-lg-4">
       <h3>チームプロフィール</h3>
-      <div class="mt-3">
+      <div class="team-name mt-3">
         チーム名：<%= @user.name %>
       </div>
       <% unless @user.introduction.nil? %>
-        <div class="mt-3">
+        <div class="team-introduction mt-3">
           <%= safe_join(@user.introduction.split("\n"),tag(:br)) %>
         </div>
       <% end %>
@@ -19,7 +19,7 @@
     <div class="col-lg-8">
       <h3>募集日程</h3>
       <% @posts.each do |post| %>
-        <div class="mt-3">
+        <div class="mt-3 post-box">
           <div>
             会場：<%= post.place %>
           </div>
