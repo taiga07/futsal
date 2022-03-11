@@ -1,24 +1,37 @@
-# README
+# エンジョイ！！フットボール
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+フットサルに特化したメンバー募集掲示板アプリです。  
+直感的に操作ができるのでメンバー募集をするのもチームを探すのも簡単に行えます。  
+チームを探す場合は、わざわざ登録する必要もないので気軽に利用する事が可能です。  
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+メンバーを募集しているチームとちょっと体を動かしたいと思っている方がマッチする場です。 
 
-* Configuration
+### 機能
 
-* Database creation
+・チーム登録  
+・ログイン  
+・投稿のCRUD  
+・チーム詳細ページ、編集機能  
+・検索機能  
 
-* Database initialization
+### ターゲットユーザー
+・メンバーを募集している人  
+・チームを探している人  
+・個サルに参加したい人  
 
-* How to run the test suite
+## 開発環境
 
-* Services (job queues, cache servers, search engines, etc.)
+- OS：Amazon Linux 2
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
 
-* Deployment instructions
 
-* ...
+## 使用素材
+
+- O-DAN[https://o-dan.net/ja/]
