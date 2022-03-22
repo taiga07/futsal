@@ -26,7 +26,7 @@
 ## 開発環境
 
 - OS：Amazon Linux 2
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- 言語：HTML,CSS,JavaScript,Ruby
 - フレームワーク：Ruby on Rails
 - JS ライブラリ：jQuery
 - IDE：Cloud9
