@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    if session[:user_id]
+    if session[:user_id]  #true = ログイン状態
        # ||=　変数に値がなければ代入する
        @current_user ||= User.find_by(id: session[:user_id])
     end
